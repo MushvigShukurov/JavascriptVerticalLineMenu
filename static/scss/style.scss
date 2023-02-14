@@ -1,0 +1,98 @@
+@import "_reset";
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    .container {
+        max-width: 120rem; // 1-rem = 10px => html {font-size:10px} oldugu ucun
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 1rem;
+        height: 100vh;
+        .menu {
+            width: 20%;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: .1rem;
+                height: 100%;
+                background: rgba(65, 105, 225, 0.5);
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            li{
+                position: absolute;                
+                left: 50%;
+                display: none;
+                &:nth-child(1){
+                    top: 20%;
+                }
+                &:nth-child(2){
+                    top: 40%;
+                }
+                &:nth-child(3){
+                    top: 60%;
+                }
+                &:nth-child(4){
+                    top: 80%;
+                }
+            }
+            .active{
+                font-size: 1.4rem;
+                display: block;
+                padding-left: 1rem;
+                &::before{
+                    content: "";
+                    width: .6rem;
+                    height: .6rem;
+                    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                    position: absolute;
+                    top: 50%;
+                    left: -1rem;
+                    transform: translateY(-50%);
+                    background: royalblue;
+                }
+                &::after{
+                    content:"";
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -.3rem;
+                    width: .6rem;
+                    height: .6rem;
+                    background: royalblue;
+                }
+                
+            }
+        }
+
+        .box {
+            width: 80%;
+            background: #1e1e1e;
+            .inner-box{
+                width: 100%;
+                height: 100%;
+                display: none;
+                &:nth-child(1){
+                    display: block;
+                    background: red;
+                }
+                &:nth-child(2){
+                    background: green;
+                }
+                &:nth-child(3){
+                    background: orange;
+                }
+                &:nth-child(4){
+                    background: rebeccapurple;
+                }
+            }
+        }
+    }
+}

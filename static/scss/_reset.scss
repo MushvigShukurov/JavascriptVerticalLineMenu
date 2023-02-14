@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+ul,li,ol{
+    list-style: none;
+}
+
+button,input,textarea{
+    outline: none;
+    border: none;
+    background: transparent;
+}

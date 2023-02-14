@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+button, input, textarea {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body .container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  height: 100vh;
+}
+body .container .menu {
+  width: 20%;
+  position: relative;
+}
+body .container .menu::before {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  height: 100%;
+  background: rgba(65, 105, 225, 0.5);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body .container .menu li {
+  position: absolute;
+  left: 50%;
+  display: none;
+}
+body .container .menu li:nth-child(1) {
+  top: 20%;
+}
+body .container .menu li:nth-child(2) {
+  top: 40%;
+}
+body .container .menu li:nth-child(3) {
+  top: 60%;
+}
+body .container .menu li:nth-child(4) {
+  top: 80%;
+}
+body .container .menu .active {
+  font-size: 1.4rem;
+  display: block;
+  padding-left: 1rem;
+}
+body .container .menu .active::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+  background: royalblue;
+}
+body .container .menu .active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -0.3rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  background: royalblue;
+}
+body .container .box {
+  width: 80%;
+  background: #1e1e1e;
+}
+body .container .box .inner-box {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+body .container .box .inner-box:nth-child(1) {
+  display: block;
+  background: red;
+}
+body .container .box .inner-box:nth-child(2) {
+  background: green;
+}
+body .container .box .inner-box:nth-child(3) {
+  background: orange;
+}
+body .container .box .inner-box:nth-child(4) {
+  background: rebeccapurple;
+}/*# sourceMappingURL=style.css.map */
